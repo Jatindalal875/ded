@@ -74,14 +74,14 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hellow My name is` *Eʟɪsᴀ 🌟*
+`Hellow My name is` *𝗘𝗗𝗜𝗧𝗛(^o^)*
 `I'm here to help you manage your groups! Hit Help button below to find out more about how to use me to my full potential.` 
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="Aᴅᴅ Mᴇ 🎉", url="t.me/AndreaBetaRoBot?startgroup=true"),
+            text="Aᴅᴅ Mᴇ 🎉", url="t.me/edith_robot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="Aʙᴏᴜᴛ 🔖", callback_data="masha_"),
@@ -91,7 +91,7 @@ buttons = [
         InlineKeyboardButton(
             text="Sᴏᴜʀᴄᴇ 💫", callback_data="source_"),
         InlineKeyboardButton(
-            text="Sᴜᴘᴘᴏʀᴛ 📢", url="https://t.me/AndreaSupportChat"
+            text="Sᴜᴘᴘᴏʀᴛ 📢", url="https://t.me/EAGLE_MAFIA_CLUB"
         ),
     ],
 ]
@@ -101,7 +101,7 @@ HELP_STRINGS = """
 *『HELP BUTTONS HERE』*"""
 
 
-DONATE_STRING = """No need.. I'm rich"""
+DONATE_STRING = """https://t.me/EAGLE_MAFIA_CLUB"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -346,16 +346,16 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text="""  I'm *Andrea Beta*, a powerful group management bot built to help you manage your group easily.
+            text="""  I'm *𝗘𝗗𝗜𝗧𝗛(◠‿◠)*, a powerful group management bot built to help you manage your group easily.
                  ❍ I can restrict users.
                  ❍ I can greet users with customizable welcome messages and even set a group's rules.
                  ❍ I have an advanced anti-flood system.
                  ❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  ❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  ❍ I check for admins' permissions before executing any command and more stuffs
-                 \n_Masha's licensed under the GNU General Public License v3.0_
-                 Here is the [Contact My Owner](https://t.me/TERA_BAAP_VILLAIN_XD).
-                 If you have any question about Masha, let us know at @AndreaSupportChat.""",
+                 \n_I Am licensed under the GNU General Public License v3.0_
+                 Here is the [Contact My Father](https://t.me/EAGLE_MAFIA_CLUB).
+                 If you have any question about Masha, let us know at @stranger_to_buddie.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -381,8 +381,8 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi.. I'm *Andrea Beta*
-                 \nHere is the [Source Code](https://t.me/TERA_BAAP_VILLAIN_XD) .""",
+            text=""" Hi.. I'm *𝗘𝗗𝗜𝗧𝗛*
+                 \nHere is the [Source Code](https://t.me/EAGLE_MAFIA_CLUB) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
@@ -629,7 +629,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 254318997 and DONATION_LINK:
+        if OWNER_ID != 5331427205 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -677,10 +677,10 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Heya! I'm alive 🙂")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "𝗕𝗔𝗕𝗬 𝗜 𝗔𝗠 𝗔𝗟𝗜𝗩𝗘 🙂")
         except Unauthorized:
             LOGGER.warning(
-                "Bot isnt able to send message to support_chat, go and check!"
+                "𝗠𝗔𝗔 𝗖𝗛𝗨𝗗𝗜 𝗣𝗔𝗗𝗜 𝗛"
             )
         except BadRequest as e:
             LOGGER.warning(e.message)
